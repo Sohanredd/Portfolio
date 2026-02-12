@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohan Reddy - Data Engineer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 11pt;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 50px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2563eb;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 32pt;
+            color: #1e40af;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 13pt;
+            color: #4b5563;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 10pt;
+            color: #6b7280;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Section Titles */
+        .section {
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            color: #1e40af;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Professional Summary */
+        .summary {
+            font-size: 10.5pt;
+            color: #4b5563;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            margin-bottom: 12px;
+        }
+
+        .skill-category h3 {
+            font-size: 11pt;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-category li {
+            font-size: 10pt;
+            color: #4b5563;
+            padding: 3px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .experience-header h3 {
+            font-size: 12pt;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .experience-header .period {
+            font-size: 10pt;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .company {
+            font-size: 11pt;
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .location {
+            font-size: 9.5pt;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .experience-description {
+            font-size: 10pt;
+            color: #4b5563;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievements li {
+            font-size: 10pt;
+            color: #4b5563;
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .achievements li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .technologies {
+            margin-top: 8px;
+            font-size: 9.5pt;
+            color: #6b7280;
+        }
+
+        .technologies strong {
+            color: #374151;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .education-header h3 {
+            font-size: 12pt;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .education-header .period {
+            font-size: 10pt;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .university {
+            font-size: 11pt;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .education-details {
+            font-size: 10pt;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .gpa {
+            font-size: 10pt;
+            color: #1e40af;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Certifications Section */
+        .certification-item {
+            margin-bottom: 12px;
+        }
+
+        .certification-item h3 {
+            font-size: 11pt;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .certification-details {
+            font-size: 10pt;
+            color: #6b7280;
+        }
+
+        .certification-link {
+            font-size: 9.5pt;
+            color: #2563eb;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 3px;
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+
+        .project-item h3 {
+            font-size: 11.5pt;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .project-description {
+            font-size: 10pt;
+            color: #4b5563;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .project-achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-achievements li {
+            font-size: 10pt;
+            color: #4b5563;
+            padding: 3px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .project-achievements li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 10pt;
+            }
+            .container {
+                padding: 20px 30px;
+                max-width: 100%;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            a {
+                color: #2563eb;
+                text-decoration: none;
+            }
+        }
+
+        @page {
+            margin: 0.5in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>SOHAN REDDY</h1>
+            <div class="title">Data Engineer | Azure Databricks | ETL Pipelines | MS in Data Science</div>
+            <div class="contact-info">
+                <span>📧 sohan.siddenki@gmail.com</span>
+                <span>|</span>
+                <span>📱 +1 (904) 861-9116</span>
+                <span>|</span>
+                <span>📍 Jacksonville, Florida</span>
+            </div>
+            <div class="contact-info" style="margin-top: 8px;">
+                <span><a href="https://www.linkedin.com/in/sohan-reddy-7a8235183/" target="_blank">🔗 LinkedIn Profile</a></span>
+                <span>|</span>
+                <span><a href="https://github.com/Sohanredd" target="_blank">💻 GitHub Profile</a></span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Experienced Data Engineer with 3+ years specializing in cloud-based data solutions, ETL pipeline development, and AI-powered analytics. Currently leading data modernization initiatives at D2I Healthcare while leveraging expertise from previous work with Johnson & Johnson. Proven track record of transforming complex data challenges into scalable, efficient solutions that drive business value. Expert in Azure and AWS Databricks ecosystems, with demonstrated success in migrating legacy systems to modern cloud architectures, achieving 30%+ runtime reductions and 40% improvements in data accuracy. Passionate about integrating AI/ML capabilities into data pipelines to enable intelligent, data-driven decision-making across organizations.
+            </p>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Data Engineer</h3>
+                    <span class="period">Aug 2025 - Present</span>
+                </div>
+                <div class="company">Intuceo (via iCube) | D2I Healthcare</div>
+                <div class="location">New Jersey, United States (Remote)</div>
+                <p class="experience-description">
+                    Leading data modernization and cloud migration initiatives for D2I Healthcare's enterprise data infrastructure.
+                </p>
+                <ul class="achievements">
+                    <li>Leading migration of on-premise SSIS-based ETL pipelines to modern AWS Databricks architecture, achieving 30%+ runtime reduction through metadata-driven frameworks and optimized data orchestration</li>
+                    <li>Building reusable PySpark frameworks for extracting, transforming, and loading data from multiple sources into Amazon S3 and Delta tables, improving development efficiency and code maintainability</li>
+                    <li>Integrating AWS Glue, Lambda, and Step Functions to orchestrate ETL workflows, enabling seamless automation and scalability across batch and near real-time data processing</li>
+                    <li>Designing metadata-driven ingestion and monitoring frameworks for both batch and near real-time data processing, reducing manual intervention and improving data quality</li>
+                    <li>Collaborating with business and analytics teams to modernize data access patterns and reduce ETL runtime, directly improving report generation speed and data freshness</li>
+                </ul>
+                <div class="technologies">
+                    <strong>Technologies:</strong> AWS Databricks, PySpark, Amazon S3, AWS Glue, Lambda, Step Functions, SQL, Delta Lake, SSIS
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Data Engineer</h3>
+                    <span class="period">Dec 2022 - Jul 2025</span>
+                </div>
+                <div class="company">Intuceo (via iCube) | Johnson & Johnson</div>
+                <div class="location">Jacksonville, Florida, United States</div>
+                <p class="experience-description">
+                    Worked on Johnson & Johnson's JJAR (Johnson & Johnson Activity Repository) and Pharma Reporting Automation programs, delivering enterprise-scale data solutions for Fortune 500 pharmaceutical operations.
+                </p>
+                <ul class="achievements">
+                    <li>Migrated legacy QlikView/NPrinting dashboards to Databricks SQL, fully automating report generation and email delivery, eliminating manual processes and reducing report generation time from hours to minutes</li>
+                    <li>Developed end-to-end ETL workflows for PASS 1/2/3, ArisG, and PSMF Pharma reporting, ensuring regulatory compliance and data accuracy across multiple regulatory frameworks</li>
+                    <li>Implemented data aggregation and validation frameworks ensuring data quality and consistency across environments (DEV, UAT, PROD), achieving 40% improvement in data accuracy</li>
+                    <li>Improved dashboard refresh times and data accuracy by 40%, increasing reporting efficiency and enabling faster business decision-making for global stakeholders</li>
+                    <li>Partnered with global stakeholders for delivery planning, QA validation, and monthly release automation, coordinating across multiple time zones and teams to ensure seamless deployments</li>
+                </ul>
+                <div class="technologies">
+                    <strong>Technologies:</strong> Azure Databricks, PySpark, Delta Lake, Hive, Power BI, Python, QlikView, NPrinting, Azure Data Factory
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Data Engineering</h3>
+                    <ul>
+                        <li>Azure Databricks & AWS Databricks</li>
+                        <li>Microsoft Azure & Amazon S3</li>
+                        <li>ETL/ELT Pipelines & Data Architecture</li>
+                        <li>Azure Data Factory & AWS Glue</li>
+                        <li>Delta Lake & PySpark</li>
+                        <li>Hive, SQL Server & Data Modeling</li>
+                        <li>SSIS to Cloud Migration</li>
+                        <li>Metadata-Driven Pipelines</li>
+                        <li>AWS Lambda & Step Functions</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Tools</h3>
+                    <ul>
+                        <li>Python (pandas, numpy, pyspark, boto3)</li>
+                        <li>SQL (T-SQL, HiveQL, Spark SQL)</li>
+                        <li>Git / GitHub / Bitbucket</li>
+                        <li>Azure DevOps & CI/CD Pipelines</li>
+                        <li>Jenkins & Ansible Tower</li>
+                        <li>REST APIs (JSON/XML)</li>
+                        <li>Jupyter & VS Code</li>
+                        <li>Shell Scripting (Bash)</li>
+                        <li>Kafka (Confluent Platform)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Business Intelligence</h3>
+                    <ul>
+                        <li>Power BI & Databricks SQL</li>
+                        <li>Dashboard Design & KPI Development</li>
+                        <li>Data Visualization & Reporting</li>
+                        <li>DAX & Power Query</li>
+                        <li>Reporting Automation</li>
+                        <li>Executive Metrics Tracking</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>Machine Learning (Regression, Classification)</li>
+                        <li>Predictive Modeling & Statistical Analysis</li>
+                        <li>Feature Engineering & Model Evaluation</li>
+                        <li>NLP & Text Classification</li>
+                        <li>LLM Integration & Prompt Engineering</li>
+                        <li>Natural Language to SQL Automation</li>
+                        <li>Model Deployment (MLflow, Databricks ML)</li>
+                        <li>OpenAI, Claude & Hugging Face APIs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill-category" style="margin-top: 12px;">
+                <h3>Best Practices & Methodologies</h3>
+                <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                    <li>Data Governance & Data Quality</li>
+                    <li>Agile & Scrum Methodologies</li>
+                    <li>Code Review & Version Control</li>
+                    <li>CI/CD & Release Automation</li>
+                    <li>Cloud Cost Optimization</li>
+                    <li>Security & Compliance (HIPAA, GDPR)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <h3>Master of Science in Data Science</h3>
+                    <span class="period">Jan 2021 - Dec 2022</span>
+                </div>
+                <div class="university">George Mason University</div>
+                <div class="education-details">Fairfax, Virginia</div>
+                <div class="gpa">GPA: 4.0 / 4.0 (Perfect Score)</div>
+                <div class="education-details" style="margin-top: 6px;">
+                    <strong>Relevant Coursework:</strong> Machine Learning, Statistical Analysis, Data Visualization, Big Data Analytics, Data Mining, Predictive Modeling
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="certification-item">
+                <h3>Databricks Certified Data Engineer Associate</h3>
+                <div class="certification-details">Issuer: Databricks | Date: 2024</div>
+                <a href="https://credentials.databricks.com/347df483-b5b3-4783-a469-9eb57aee1423#acc.dDVHlBNp" target="_blank" class="certification-link">
+                    View Credential →
+                </a>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2 class="section-title">Academic Projects</h2>
+            <div class="project-item">
+                <h3>New York City Shooting Victims: Analysis of the Most At-Risk Population</h3>
+                <p class="project-description">
+                    Academic research project exploring gun violence patterns in New York City using NYPD Shooting Incident Data (2006–2019). Conducted comprehensive data analysis to identify at-risk populations and inform community health and safety policies.
+                </p>
+                <ul class="project-achievements">
+                    <li>Conducted data cleaning, feature extraction, and visualization using R and Python (pandas, matplotlib, seaborn)</li>
+                    <li>Built demographic and geographic visualizations to identify at-risk populations by age, race, and gender</li>
+                    <li>Analyzed borough-level trends, temporal patterns, and location-based risk factors</li>
+                    <li>Developed insights supporting data-informed community health and safety policies</li>
+                </ul>
+                <div class="technologies">
+                    <strong>Technologies:</strong> R, Python, pandas, matplotlib, seaborn, Statistical Analysis, Data Visualization
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <h2 class="section-title">Additional Information</h2>
+            <ul class="achievements">
+                <li><strong>Work Authorization:</strong> Authorized to work in the United States</li>
+                <li><strong>Location:</strong> Open to remote opportunities and relocation</li>
+                <li><strong>Interests:</strong> Cloud data architecture, AI/ML integration, healthcare analytics, data governance</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

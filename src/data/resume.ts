@@ -5,7 +5,7 @@ export const personalInfo = {
   phone: "+1 (904) 861-9116",
   location: "Jacksonville, Florida, United States",
   linkedin: "https://www.linkedin.com/in/sohan-reddy-7a8235183/",
-  github: "https://github.com/sohanreddy",
+  github: "https://github.com/Sohanredd",
   resumeUrl: "/resume.pdf",
 };
 
